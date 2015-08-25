@@ -1,0 +1,456 @@
+@import 'nib'
+
+/* VARIABLES */
+tdur        = 300ms ease
+transition  = all tdur
+radius      = 6px
+spriteLink  = '../images/sprite.png'
+
+/* FUNCTIONS */
+
+clearfix()
+  zoom 1
+  &:before,
+  &:after
+    content ""
+    display table
+  &:after
+    clear both
+
+font-proxima()
+  font-family 'proxima_nova', sans-serif
+
+bs-cover( type = cover)
+  background-size type
+  .no-backgroundsize &
+    -ms-behavior url(backgroundsize.min.htc)
+
+overflow-ellipsis(blockWidth)
+  text-overflow ellipsis
+  white-space nowrap
+  overflow hidden
+  max-width blockWidth
+
+multiline-overflow(lines-to-show)
+  display block
+  display -webkit-box
+  max-height @line-height*lines-to-show
+  -webkit-line-clamp lines-to-show
+  -webkit-box-orient vertical
+  overflow hidden
+  text-overflow ellipsis
+
+icon()
+  background-image none !important
+  position relative
+  &:before
+  &:after
+    content ' '
+    absolute left top
+    width 100%
+    height 100%
+    opacity 1
+    transition transition
+    .no-opacity &
+      display block
+  &:after
+    background-position 0 bottom
+    opacity 0
+    .no-opacity &
+      display none
+  &:hover
+    &:before
+      opacity 0
+      .no-opacity &
+        display none
+    &:after
+      opacity 1
+      .no-opacity &
+        display block
+
+html
+  height 100%
+body
+  position relative
+  font-family MinionPro-Regular,"Times New Roman",Verdana
+  font-weight normal
+  margin 0
+  -webkit-font-smoothing subpixel-antialiased !important
+  backface-visibility hidden
+  background-color: #ffffff
+h1,h2,h3,h4,ul,li
+  margin 0
+  padding 0
+  list-style none
+
+a
+  text-decoration none
+  &:visited
+    color #000
+  &:focus
+    outline none
+
+p
+  margin 0
+
+/* =============================================================================
+Global elements
+========================================================================== */
+.none
+  display none !important
+.dtable
+  display table
+.dtcell
+  display table-cell
+  vertical-align middle
+.invisible
+  visibility hidden
+  opacity 0 !important
+.hidden
+  visibility hidden !important
+.visible
+  visibility visible !important
+  opacity 1 !important
+.clear
+  clear both
+  height 0
+  font-size 0
+  line-height 0
+  overflow hidden
+  display block
+.clearfix
+  zoom 1
+  &:before,
+  &:after
+    content ""
+    display table
+  &:after
+    clear both
+.min-width
+  position relative
+  margin 0 auto
+  width 1280px
+
+/**** ICONS ****/
+.icon
+  background url(spriteLink) no-repeat
+  display inline-block
+  &.address-arrow
+    icon()
+    margin 0 0 0 19px
+    width 40px
+    height 75px
+    &:before
+    &:after
+      background url(spriteLink) no-repeat
+      background-position -190px -73px
+    &:after
+      background-position -230px -73px
+  &.mitsubishi
+    icon()
+    width 80px
+    height 20px
+    &:before
+    &:after
+      background url(spriteLink) no-repeat
+      background-position -90px -80px
+    &:after
+      background-position -90px -100px
+  &.singular
+    icon()
+    width 90px
+    height 30px
+    &:before
+    &:after
+      background url(spriteLink) no-repeat
+      background-position -0px -80px
+    &:after
+      background-position -0px -110px
+  &.winstar
+    icon()
+    width 80px
+    height 30px
+    &:before
+    &:after
+      background url(spriteLink) no-repeat
+      background-position -250px -10px
+    &:after
+      background-position -250px -40px
+  &.creamtec
+    icon()
+    width 90px
+    height 20px
+    &:before
+    &:after
+      background url(spriteLink) no-repeat
+      background-position -160px -20px
+    &:after
+      background-position -160px -40px
+  &.yopm
+    icon()
+    width 80px
+    height 40px
+    &:before
+    &:after
+      background url(spriteLink) no-repeat
+      background-position -80px 0px
+    &:after
+      background-position -80px -40px
+  &.eroglu
+    icon()
+    width 80px
+    height 20px
+    &:before
+    &:after
+      background url(spriteLink) no-repeat
+      background-position 0px -20px
+    &:after
+      background-position 0px -40px
+
+
+
+.icon-logo-big
+  position relative
+  width 120px
+  height 120px
+  background-image url(spriteLink)
+  background-position 0 0
+  display block
+  &:hover
+    background-position -120px 0
+.slides-icons
+  display block
+  position relative
+  background-image url(spriteLink)
+  &.icon-post
+    margin 30px auto 42px auto
+    width 130px
+    height 130px
+    background-position -253px -16px
+  &.icon-tel
+    margin 30px auto 32px auto
+    width 84px
+    height 140px
+    background-position -415px -10px
+/**** PAGES ****/
+/**LEFT SIDE**/
+.left-side
+  absolute top 300px left 10%
+  z-index 2
+  clearfix()
+.logo
+  display block
+.navigation-page
+  max-width 195px
+  .link
+    box-sizing border-box
+    color #000000
+    position relative
+    padding 0 19px 0 0
+    display inline-block
+    font-size 16px
+    font-family "DINPro-Medium", "Times New Roman", sans-serif
+    text-transform uppercase
+    &:first-child
+      span
+        border-top solid 1px #000000
+    span
+      display inline-block
+      min-width 168px
+      line-height 30px
+      padding 0 0 0 8px
+      border-bottom solid 1px #000000
+    .icon-arr
+      absolute top right
+      background-image url(spriteLink)
+      width 15px
+      height 32px
+      background-position -274px -74px
+    &.side-bar-active
+      .icon-arr
+        background-image url(spriteLink)
+        background-position -293px -74px
+    &:hover
+      .icon-arr
+        background-image url(spriteLink)
+        background-position -293px -74px
+.address
+  margin 10px 0 0 6px
+  p
+    display inline-block
+    font-size 11px
+    font-family "MyriadPro-Regular", serif
+
+/**CENTRAL**/
+.central
+  margin auto
+  max-width 1189px
+  background #FFFFFF
+  .central-photo
+  .logo-link
+    display inline-block
+    vertical-align middle
+  .logo-link
+    margin 0 83px 0 0
+  .central-photo
+    max-width 880px
+  .navigation-holder
+    position relative
+    z-index 2
+    background #ffffff
+    text-align center
+    .navigation-site
+      display inline-block
+.navigation-site
+  display block
+  margin 5px 0 4px 0
+  a
+    color #FFFFFF
+    display inline-block
+    width 115px
+    height 21px
+    text-align center
+    font-size 12px
+    font-family "DINPro-Regular", "Times New Roman",sans-serif
+    text-transform uppercase
+    line-height 21px
+    //*****************************
+    background #2c2c2c
+    background linear-gradient(to bottom, #2c2c2c 0%, #2c2c2c 6%, #474747 11%, #666666 16%, #595959 19%, #000000 32%, #111111 60%, #131313 100%)
+    transition 0.3s
+    border-radius 5px
+    &.menu-active
+      background #f02f17
+      background linear-gradient(to bottom, #f02f17 0%, #f02f17 5%, #f16f5c 12%, #e73827 19%, #f6290c 24%, #f02f17 85%, #f02f17 100%)
+      transition 0.3s
+      border-radius 5px
+      &:hover
+        background #f02f17
+        background linear-gradient(to bottom, #f02f17 0%, #f02f17 5%, #f16f5c 12%, #e73827 19%, #f6290c 24%, #f02f17 85%, #f02f17 100%)
+        transition 0.3s
+        border-radius 5px
+    &:hover
+      background: #3e3e3f
+      transition 0.3s
+      background linear-gradient(to bottom, #3e3e3f 0%, #3e3e3f 6%, #3e3e3f 11%, #77797c 16%, #595959 24%, #3e3e3f 32%, #3e3e3f 60%, #3e3e3f 100%)
+      border-radius 5px
+/**RIGHT SIDE**/
+.right-side
+  absolute top 300px right 15%
+  z-index 2
+.partners
+  li
+    margin 20px 0 0 0
+
+.fixed-holder
+  &.sticky-holder
+    width 1225px
+    position relative
+
+.sticky
+  .fixed-content
+    position fixed
+  .navigation-holder
+  .site-content
+    margin auto
+  .site-content
+    margin-top 30px
+  .navigation-holder
+    top 0
+    width 1189px
+    transition none
+  .left-side
+  .right-side
+    top 60px
+/**CONTENT**/
+.site-content
+  position relative
+  z-index 1
+  width 589px
+  margin 0 auto
+  background #e6e8e9 url(../images/bg-txt.png) no-repeat;
+  p
+    font-family "MyriadPro-Regular", serif
+    font-size 10px
+    padding 21px 41px 0 53px
+.location-map
+    p
+      font-family "MyriadPro-Regular", serif
+      font-size 16px
+      text-align center
+.google-map
+  width 500px
+  height: 315px
+  margin 15px auto 19px auto
+.animate-enter
+.animate-leave
+  transition 500ms cubic-bezier(0.250 0.250 0.750 0.750) all
+
+
+
+@media screen and (max-width: 1225px)
+  .left-side
+    left 5%
+  .right-side
+    right 11%
+
+
+@media screen and (min-width: 1500px)
+  .left-side
+    left 12%
+  .right-side
+    right 16.6%
+
+@media screen and (min-width: 1700px)
+  .left-side
+    left 18%
+  .right-side
+    right 21%
+
+@media screen and (min-width: 2030px)
+  .left-side
+    left 23%
+  .right-side
+    right 26%
+
+@media screen and (min-width: 2330px)
+  .left-side
+    left 25%
+  .right-side
+    right 28%
+
+@media screen and (min-width: 2630px)
+  .left-side
+    left 29%
+  .right-side
+    right 31%
+
+@media screen and (min-width: 2930px)
+  .left-side
+    left 31%
+  .right-side
+    right 33%
+
+@media screen and (min-width: 3100px)
+  .left-side
+    left 32%
+  .right-side
+    right 34%
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

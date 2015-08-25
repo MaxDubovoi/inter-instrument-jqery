@@ -1,0 +1,15 @@
+<div class="central">
+    <div class="content">
+        <a class="logo-link" href=""><img src="images/logo.png" alt=""></a>
+        <img class="central-photo" ng-src="images/photo-{{imageSrc}}.jpg" alt="">
+    </div>
+    <div class="fixed-content navigation-holder">
+        <div class="navigation-site">
+            <a ui-sref="history" ng-class="{'menu-active':activePage=='aboutCompany'}">О компании</a>
+            <a ui-sref="equipment" ng-class="{'menu-active':activePage=='products'}">Продукция</a>
+            <a ui-sref="engineering" ng-class="{'menu-active':activePage=='services'}">Услуги</a>
+            <a ui-sref="technology" ng-class="{'menu-active':activePage=='production'}">Производство</a>
+            <a ui-sref="contacts" ng-class="{'menu-active':activePage=='contacts'}">Контакты</a>
+        </div>
+    </div>
+</div>

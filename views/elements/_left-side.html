@@ -1,0 +1,17 @@
+<div class="fixed-content left-side">
+    <div class="navigation-page" ng-class="{'hidden' : activePage == 'contacts'}">
+        <a ng-repeat="item in leftMenu"
+           ng-class="{'side-bar-active': activeSubPage == item.url}"
+           ui-sref="{{ item.url }}"
+           class="link"><span>{{ item.text }}</span><i class="icon-arr"></i></a>
+    </div>
+    <div class="address">
+            <p>49019, г. Днепропетровск,<br>
+            ул. Ударников, 30 <br>
+            Факс: +38 (056)374-99-14 <br>
+            Тел.: +38 (056) 374-99-10, <br>
+            +38 (056) 374-99-11,<br>
+            +38 (056) 374-99-12.  </p>
+        <a ui-sref="contacts"><i class="icon address-arrow"></i></a>
+    </div>
+</div>
