@@ -64,4 +64,3 @@ var stickyMenu = function ($timeout) {
         }
     }
 };
-InterInstrumentApp.directive('stickyMenu', stickyMenu);

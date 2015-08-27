@@ -2,23 +2,7 @@
 <project version="4">
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/css/main.styl" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/js/app.js" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/js/controllers/AboutCompanyController.js" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/js/controllers/AimController.js" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/js/controllers/ApplicationController.js" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/js/controllers/ContactsController.js" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/js/controllers/EngineeringController.js" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/js/controllers/EquipmentController.js" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/js/controllers/HistoryController.js" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/js/controllers/MaintenanceController.js" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/js/controllers/ManufactureController.js" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/js/controllers/PartnersController.js" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/js/controllers/ProductionController.js" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/js/controllers/ServiceController.js" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/js/controllers/Snap-inController.js" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/js/controllers/TechnologyController.js" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/js/controllers/ToolController.js" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/js/controllers/VacancyController.js" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/views/elements/_right-side.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/variables.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/views/elements/_right-side.php" charset="UTF-8" />
   </component>
 </project>

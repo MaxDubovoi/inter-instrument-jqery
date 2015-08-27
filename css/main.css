@@ -62,8 +62,8 @@ Global elements
 .visible {
   visibility: visible !important;
   opacity: 1 !important;
-  -ms-filter: none !important;
-  filter: none !important;
+  -ms-filter: none;
+  filter: none;
 }
 .clear {
   clear: both;
@@ -632,8 +632,8 @@ Global elements
   background: -ms-linear-gradient(top, #2c2c2c 0%, #2c2c2c 6%, #474747 11%, #666 16%, #595959 19%, #000 32%, #111 60%, #131313 100%);
   background: linear-gradient(to bottom, #2c2c2c 0%, #2c2c2c 6%, #474747 11%, #666 16%, #595959 19%, #000 32%, #111 60%, #131313 100%);
   transition: 0.3s;
-  -webkit-border-radius: 5px;
-  border-radius: 5px;
+  border-top-right-radius: 3px;
+  border-top-left-radius: 3px;
 }
 .navigation-site a.menu-active {
   background: #f02f17;
@@ -665,8 +665,8 @@ Global elements
   background: -o-linear-gradient(top, #3e3e3f 0%, #3e3e3f 6%, #3e3e3f 11%, #77797c 16%, #595959 24%, #3e3e3f 32%, #3e3e3f 60%, #3e3e3f 100%);
   background: -ms-linear-gradient(top, #3e3e3f 0%, #3e3e3f 6%, #3e3e3f 11%, #77797c 16%, #595959 24%, #3e3e3f 32%, #3e3e3f 60%, #3e3e3f 100%);
   background: linear-gradient(to bottom, #3e3e3f 0%, #3e3e3f 6%, #3e3e3f 11%, #77797c 16%, #595959 24%, #3e3e3f 32%, #3e3e3f 60%, #3e3e3f 100%);
-  -webkit-border-radius: 5px;
-  border-radius: 5px;
+  border-top-right-radius: 3px;
+  border-top-left-radius: 3px;
 }
 /**RIGHT SIDE**/
 .right-side {
