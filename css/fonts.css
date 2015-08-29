@@ -1,33 +1,33 @@
 @font-face {
-    font-family: 'DINPro-Medium';
+    font-family: 'DINPro';
     src:
     url('../fonts/DINPro-Medium.eot?#iefix') format('embedded-opentype'),
     url('../fonts/DINPro-Medium.otf')  format('opentype'),
     url('../fonts/DINPro-Medium.woff') format('woff'),
     url('../fonts/DINPro-Medium.ttf')  format('truetype'),
     url('../fonts/DINPro-Medium.svg#DINPro-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'MyriadPro';
+    src: url('../fonts/MyriadProRegular.eot');
+    src:local('?'),
+    url('../fonts/MyriadProRegular.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/MyriadProRegular.woff') format('woff'),
+    url('../fonts/MyriadProRegular.ttf')  format('truetype'),
+    url('../fonts/MyriadProRegular.svg#MyriadProRegular') format('svg');
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
-    font-family: 'MyriadPro-Regular';
+    font-family: 'DINPro';
+    src:
+    url('../fonts/DINPro-Regular.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/DINPro-Regular.otf')  format('opentype'),
+    url('../fonts/DINPro-Regular.woff') format('woff'),
+    url('../fonts/DINPro-Regular.ttf')  format('truetype'),
+    url('../fonts/DINPro-Regular.svg#DINPro-Regular') format('svg');
+    font-weight: normal;
     font-style: normal;
-    font-weight: 400;
-    src: url('../fonts/MyriadProRegular.eot');
-    src: url('../fonts/MyriadProRegular.eot') format('embedded-opentype'),
-    url('../fonts/MyriadProRegular.woff2') format('woff2'),
-    url('../fonts/MyriadProRegular.woff') format('woff'),
-    url('../fonts/MyriadProRegular.ttf') format('truetype'),
-    url('../fonts/MyriadProRegular.svg#MyriadProRegular') format('svg');
-}
-@font-face {
-    font-family: 'DINPro-Regular';
-    font-style: normal;
-    font-weight: 400;
-    src: url('../fonts/DINProRegular_13937.eot');
-    src: url('../fonts/DINProRegular_13937.eot') format('embedded-opentype'),
-    url('../fonts/DINProRegular_13937.woff2') format('woff2'),
-    url('../fonts/DINProRegular_13937.woff') format('woff'),
-    url('../fonts/DINProRegular_13937.ttf') format('truetype'),
-    url('../fonts/DINProRegular_13937.svg#DINProRegular_13937') format('svg');
 }

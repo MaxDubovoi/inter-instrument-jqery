@@ -54,7 +54,6 @@ switch ($_SESSION['page']){
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" >
 <head>
-    <base href="" >
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
     <meta http-equiv="Pragma" content="no-cache" />
@@ -68,19 +67,43 @@ switch ($_SESSION['page']){
     <meta property="og:description" content=""/>
     <meta property="og:image" content="" />
     <meta property="og:url" content="" />
+    <link rel="shortcut icon" href="http://intool.php/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="http://intool.php/favicon.ico" type="image/x-icon" />
+
     <!--[if lt IE 9]>
     <script src="js/libs/ie-html5tags.js" type="text/javascript"></script>
     <![endif]-->
-    <link rel="icon" href="" type="image/x-icon" />
-    <link rel="shortcut icon" href="" type="image/x-icon" />
+    <!--[if gte IE 9]>
+    <style type="text/css">
+    .gradient {
+    filter: none;
+    }
+    </style>
+    <![endif]-->
+    <!--[if IE]>
+    <style>
+        @font-face {
+            /* Book */
+            font-family: 'MyriadPro';
+            src: url('fonts/MyriadProRegular.eot?#iefix') format('☺');
+            font-weight:  400;
+            font-style:   normal;
+            font-variant: normal;
+            font-stretch: normal;
+        }
+    </style>
+    <![endif]-->
+
 
     <link rel="stylesheet" href="css/normalize.css" type="text/css" />
     <link rel="stylesheet" href="css/fonts.css" type="text/css" />
     <link rel="stylesheet" href="css/main.css" type="text/css" media="screen, projection"/>
 
     <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE" />
-    <script src="js/stickyMenu.js" type="text/javascript"></script>
     <script src="js/libs/jquery-1.9.1.js" type="text/javascript"></script>
+    <script src="js/libs/modernizr-2.6.2.min.js" type="text/javascript"></script>
+
+    <script src="js/stickyMenu.js" type="text/javascript"></script>
 
 </head>
 

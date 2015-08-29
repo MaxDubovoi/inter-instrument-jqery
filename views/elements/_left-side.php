@@ -14,7 +14,7 @@ switch($_SESSION['section'])
             'text'=>array('Проектирование','Изготовление','Сопровождение') );
         break;
     case 'production':
-        $left_menu = array('name'=>array('technology','production','services'),
+        $left_menu = array('name'=>array('technology','production','service'),
             'text'=>array('Технологии','Производство','Сервис') );
         break;
     case 'contacts':
@@ -28,10 +28,16 @@ switch($_SESSION['section'])
     <div class="navigation-page">
         <?for($i=0;$i < count($left_menu['name']);$i++)
             {
-                echo (
-                    "<a class='link' href='/index.php?page=".$left_menu['name'][$i]."'>
+        if ($_SESSION['page'] == $left_menu['name'][$i]):
+
+            echo ("<a class='link side-bar-active' ><span>".$left_menu['text'][$i]."</span><i class='icon-arr'></i></a>");
+       else:
+           echo (
+               "<a class='link' href='/index.php?page=".$left_menu['name'][$i]."'>
                     <span>".$left_menu['text'][$i]."</span><i class='icon-arr'></i>
                     </a>");
+        endif;
+
             }
         ?>
     </div>
@@ -42,6 +48,6 @@ switch($_SESSION['section'])
             Тел.: +38 (056) 374-99-10, <br>
             +38 (056) 374-99-11,<br>
             +38 (056) 374-99-12.  </p>
-        <a ui-sref="contacts"><i class="icon address-arrow"></i></a>
+        <a href="/index.php?page=contacts"><i class="icon address-arrow"></i></a>
     </div>
 </div>
