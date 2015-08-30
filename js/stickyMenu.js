@@ -1,4 +1,5 @@
-var body = $('html, body');
+var body = $('html,body');
+var stickyBody=$('body');
 var fixedHolder = $('.fixed-holder');
 var isMobile = {
     Android: function() {
@@ -21,59 +22,55 @@ var isMobile = {
     }
 };
 var stickyMenu = function () {
-    var fixedHolder = $('.fixed-holder');
+                    var fixedHolder = $('.fixed-holder');
+                    var menuOffsetLeft, menu;
 
-
-            var menuOffsetLeft, menu;
-            if(!isMobile.any()) {
-
-
-                    menu = document.querySelector('.navigation-site');
-                    var leftSide = document.querySelector('.left-side');
-                    var menuHolder = document.querySelector('.navigation-holder');
+                    var windowWidth = $(window).width();
+                    menu = $('.navigation-site');
+                    var leftSide = $('.left-side');
+                    var menuHolder = $('.navigation-holder');
 
                     var origOffsetY = menuHolder.offsetTop;
 
-                    if ($(window).scrollTop() >= origOffsetY && window.innerWidth > 1225)
+                    if ($(window).scrollTop() >= origOffsetY && windowWidth > 1225)
                         body.addClass('sticky');
-                    else if (window.innerWidth < 1225)
+                    else if (windowWidth < 1225)
                         fixedHolder.addClass('sticky-holder');
 
                     function onScroll(e) {
-                        if ($(window).scrollTop() >= origOffsetY && window.innerWidth > 1225) {
+                        if ($(window).scrollTop() >= origOffsetY && windowWidth > 1225) {
                             body.addClass('sticky');
                         } else {
                             body.removeClass('sticky');
-                            menuHolder.style.left = '';
+                            menuHolder.css('left','');
                         }
 
                     }
                     $(window).bind('mousewheel DOMMouseScroll', onScroll).bind('scroll', onScroll);
-            }
+
+
     };
 var contentResize = function() {
-    var menuHolder = document.querySelector('.navigation-holder');
+    var windowWidth = $(window).width();
+    var menuHolder = $('.navigation-holder');
 
     var origOffsetY = menuHolder.offsetTop;
 
-    if ($(window).width() < 1225) {
+    if (windowWidth < 1225) {
         body.removeClass('sticky');
         fixedHolder.addClass('sticky-holder');
     } else {
         fixedHolder.removeClass('sticky-holder');
     }
-    if ($(window).scrollTop() >= origOffsetY && window.innerWidth > 1225)
+    if ($(window).scrollTop() >= origOffsetY && $(window).width() > 1225)
         body.addClass('sticky');
-    else if (window.innerWidth < 1225)
-        fixedHolder.addClass('sticky-holder');
+    else if (windowWidth < 1225)
+        body.addClass('sticky-holder');
 };
 
 $(document).ready(function(){
     stickyMenu();
     contentResize();
-
-});
-$(document).load(function(){
 
 });
 $(window).resize(function() {
